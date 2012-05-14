@@ -3,7 +3,8 @@
   (:use slingshot.slingshot)
   (:require [clojure.string :as s])
   (:require [clj-http.client :as http])
-  (:use clj-salesforce.util))
+  (:use clj-salesforce.util)
+  (:import [java.net URLEncoder]))
 
 (defn api-login
   "Get session ID and server from Salesforce for API calls.  Returns login token passed to other api calls."
